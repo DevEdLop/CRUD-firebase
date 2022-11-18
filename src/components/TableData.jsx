@@ -19,7 +19,7 @@ const TableData = (props) => {
                                 <th>ACCCIONES</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id='usersTable'>
                             {
                                 userForm.map((item) => {
                                     return (<>

@@ -59,25 +59,25 @@ const Formulario = () => {
             return;
         }
 
-        if (!form.ocupacion) {
+        if (!form.ocupacion.trim()) {
             setErrors({ ocupacion: "La ocupacion es requerida" });
             return;
         }
 
-        if (!form.identificacion) {
+        if (!form.identificacion.trim()) {
             setErrors({ identificacion: "La identificacion es requerida" });
             return;
         }
-        if (!form.pais) {
+        if (!form.pais.trim()) {
             setErrors({ pais: "El pais es requerido" });
             return;
         }
-        if (!form.edad) {
+        if (!form.edad.trim()) {
             setErrors({ edad: "La edad es requerida" });
             return;
         }
 
-        if (!form.sexo) {
+        if (!form.sexo.trim()) {
             setErrors({ sexo: "el genero es requerido" });
             return;
         }
@@ -227,6 +227,7 @@ const Formulario = () => {
         setId('')
         setModoEdicion(false)
         setForm(initialState)
+        setErrors('')
     }
 
 
@@ -257,7 +258,8 @@ const Formulario = () => {
                                 errors.edad ||
                                 errors.sexo}</p>
                         </div>
-                    ) : null}
+                    ) : <>
+                    </>}
                 </div>
 
                 <div className='col-4'>
@@ -309,22 +311,24 @@ const Formulario = () => {
                         {
                             modoEdicion ?
                                 (
-                                    <>
+                                    <div className='mt-2'>
                                         <button
                                             className='btn btn-warning btn-block'
                                             on='submit'>Editar</button>
                                         <button
                                             className='btn btn-dark btn-block mx-2'
                                             onClick={() => cancelar()}>Cancelar</button>
-                                    </>
+                                    </div>
                                 )
                                 :
+                                
+                                    <button
+                                        type='submit'
+                                        className='btn btn-primary btn-block mt-2' >
+                                        agregar
+                                    </button>
+                                
 
-                                <button
-                                    type='submit'
-                                    className='btn btn-primary btn-block' >
-                                    agregar
-                                </button>
                         }
                     </form>
 
