@@ -83,7 +83,7 @@ const Formulario = () => {
         }
 
 
-        setForm({})
+        setForm(initialState)
 
 
         console.log("Registrado");
@@ -116,7 +116,7 @@ const Formulario = () => {
                 }
             ])
 
-            setForm({})
+            setForm(initialState)
             setErrors('')
 
         } catch (error) {
@@ -197,7 +197,7 @@ const Formulario = () => {
         }
 
 
-        setForm({})
+        setForm(initialState)
 
 
         console.log("Registrado");
