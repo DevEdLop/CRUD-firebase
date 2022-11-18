@@ -10,12 +10,12 @@ const TableData = (props) => {
                         <thead>
                             <tr>
                                 <th>NOMBRE</th>
-                                <th>OCUPACION</th>
                                 <th>APELLIDO</th>
+                                <th>OCUPACION</th>
                                 <th>IDENTIFICACION</th>
                                 <th>PAIS</th>
                                 <th>EDAD</th>
-                                <th>SEXO</th>
+                                <th>GENERO</th>
                                 <th>ACCCIONES</th>
                             </tr>
                         </thead>
@@ -25,8 +25,8 @@ const TableData = (props) => {
                                     return (<>
                                         <tr key={item.id}>
                                             <td>{item.nombre}</td>
-                                            <td>{item.ocupacion}</td>
                                             <td>{item.apellido}</td>
+                                            <td>{item.ocupacion}</td>
                                             <td>{item.nidentificacion}</td>
                                             <td>{item.npais}</td>
                                             <td>{item.nedad}</td>
